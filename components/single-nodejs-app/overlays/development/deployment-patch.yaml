@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: single-nodejs-app
+  namespace: user1-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/jduimovich0/single-nodejs-app@sha256:3c1d45b411e5ef9dea76477a116856303c485077fb3d3ba0d0c1f03682c547e6
+        name: container-image
+        resources: {}
+status: {}
